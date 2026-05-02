@@ -1,0 +1,6 @@
+@Bragais_LibraryNowAPI_HostAddress = http://localhost:5004
+
+GET {{Bragais_LibraryNowAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
