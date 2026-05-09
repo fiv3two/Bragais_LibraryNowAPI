@@ -16,8 +16,6 @@ app.Urls.Add($"http://+:{port}");
     app.UseSwagger();
     app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
-
 app.MapControllers();
 
 app.Run();
