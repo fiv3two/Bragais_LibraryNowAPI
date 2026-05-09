@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /src
 COPY . .
 RUN dotnet restore "Bragais_LibraryNowAPI.csproj"
-RUN dotnet publish -c Release -o /app/out
+RUN dotnet publish "Bragais_LibraryNowAPI.csproj" -c Release -o /app/out
 
 FROM base AS final
 WORKDIR /app
