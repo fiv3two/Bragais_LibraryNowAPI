@@ -11,5 +11,5 @@ RUN dotnet publish "Bragais_LibraryNowAPI/Bragais_LibraryNowAPI.csproj" -c Relea
 
 FROM base AS final
 WORKDIR /app
-COPY --fropm=build /app/out .
+COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "BragaisNowAPI.dll"]
