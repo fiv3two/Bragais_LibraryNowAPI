@@ -6,10 +6,10 @@ ENV ASPNETCORE_URLS=http://+:8080
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /src
 COPY . .
-RUN dotnet restore
+RUN dotnet restore "Bragais_LibraryNowAPI.csproj"
 RUN dotnet publish -c Release -o /app/out
 
 FROM base AS final
 WORKDIR /app
 COPY --fropm=build /app/out .
-ENTRYPOINT ["dotnet", "BragaisNowAPI.dll"]S
+ENTRYPOINT ["dotnet", "BragaisNowAPI.dll"]
